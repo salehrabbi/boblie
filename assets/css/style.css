@@ -265,7 +265,7 @@ service Style
   background-size: 100% 100%;
   width: 100%;
   position: absolute;
-  bottom: 100%;
+  bottom: 99.80%;
   left: 0;
   height: 115px;
 }
