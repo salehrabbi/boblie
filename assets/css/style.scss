@@ -1,9 +1,11 @@
+@import '_rem';
+
 body {
     color: #302f2f;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 36px;
 
 }
@@ -16,6 +18,11 @@ img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 ul,
@@ -91,7 +98,7 @@ h6 {
     }
 
     p {
-        font-size: 16px;
+
         line-height: (32/16);
         max-width: 490px;
         margin: 0 auto;
@@ -141,9 +148,11 @@ header {
     width: 100%;
     z-index: 9999;
 }
-.navbar-fixed-top{
+
+.navbar-fixed-top {
     background: url(Image), linear-gradient(3.76deg, #0082D5 -50.2%, #A234D5 114%);
 }
+
 .main-menu {
     margin-top: 9px;
 }
@@ -155,14 +164,15 @@ header {
 
 .main-menu a {
     color: #fff;
-    font-size: 16px;
+
     display: block;
     text-decoration: none !important;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
-    &:hover{
-        &:after{
+
+    &:hover {
+        &:after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -171,14 +181,13 @@ header {
             background: linear-gradient(179.9deg, #FFC167 -382.23%, #FF6F08 351.37%, #FF6D06 351.37%);
             border-radius: 1px;
             left: 0;
-            
+
         }
     }
 }
 
 .menu-wraper {
     position: relative;
-    padding-right: 100px;
 }
 
 .site-logo {
@@ -196,6 +205,7 @@ banner Style
 .banner {
     background: url(Image), linear-gradient(24.27deg, #0082D5 -50.2%, #A234D5 114%);
     padding-top: 150px;
+    overflow: hidden;
 
     .svg {
         vertical-align: middle;
@@ -203,7 +213,7 @@ banner Style
 
     p {
         color: #fff;
-        font-size: 16px;
+
         line-height: (32/16);
 
     }
@@ -280,6 +290,10 @@ service Style
     padding-top: 130px;
     padding-bottom: 200px;
 
+    .container {
+        padding: 0 22px;
+    }
+
     &:before {
         content: "";
         background: url(../images/White_background_curved.png) no-repeat;
@@ -334,7 +348,7 @@ service Style
             }
 
             p {
-                font-size: 16px;
+
                 line-height: (32/16);
             }
         }
@@ -368,7 +382,7 @@ package Style
             li {
                 font-weight: 600;
                 line-height: 24px;
-                font-size: 16px;
+
                 color: #1B1B1B;
                 margin-bottom: 15px;
 
@@ -409,6 +423,7 @@ Footer Style
 footer {
     background: #372A82;
     color: #fff;
+    padding: 110px 0;
 }
 
 .footer-menu li {
@@ -418,7 +433,7 @@ footer {
 
 .footer-menu a {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     line-height: (24/16);
     display: block;
     text-decoration: none !important;
@@ -427,6 +442,10 @@ footer {
         font-weight: 600;
     }
 
+}
+
+.footer-box {
+    padding-bottom: 30px;
 }
 
 .footer-box h2 {
@@ -447,18 +466,37 @@ footer {
 
 
 .footer-logo img {
-    margin-top: -18px;
+    margin-top: -6px;
+    float: left;
+    max-width: 69px;
 }
 
 .footer-box p {
-    font-size: 16px;
+
     line-height: (24/16);
+
 }
 
+.footer-logo p {
+    font-size: 14px;
+    line-height: 1.5;
+    float: left;
+    width: calc(100% - 69px);
+    max-width: 202px;
+    padding-left: 10px;
+
+    span {
+        display: block;
+        opacity: .5;
+
+    }
+}
+
+
 .footer-box .review {
-    font-size: 20px;
+
     margin-top: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     text-align: right;
 }
 
@@ -470,15 +508,19 @@ footer {
     margin-bottom: 0;
 }
 
+.footer-social {
+    text-align: right;
+}
+
 .footer-social a {
     color: #302f2f;
-    font-size: 22px;
-    margin-right: 10px;
+    font-size: 20px;
+    margin-right: 5px;
     background: #fff;
     text-align: center;
-    line-height: 40px;
-    height: 40px;
-    width: 40px;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     display: inline-block;
 
@@ -526,6 +568,45 @@ a.scrollup i:hover {
     text-decoration: none;
 }
 
+
+@media (max-width:1199px) {
+    .footer-social a {
+        margin-right: 0;
+    }
+
+    .banner .iphone .clear-img {
+        right: 34px;
+    }
+
+    .banner .deal {
+        font-size: 18px;
+    }
+
+    .banner h2 {
+        font-size: 40px;
+    }
+
+    .banner br {
+        display: none;
+    }
+
+    .service .container {
+        padding: 0 10px;
+    }
+
+    .service .items {
+        margin: 0 -10px;
+    }
+
+    .service .items .col-md-4 {
+        padding: 0px 10px;
+    }
+
+    .service .items .item {
+        padding: 54px 30px 35px 30px;
+    }
+}
+
 @media (max-width: 767px) {
     .scroll-button {
         display: none;
@@ -566,6 +647,7 @@ a.scrollup i:hover {
         cursor: pointer;
         margin-top: 14px;
         font-size: 30px;
+        color: #fff;
     }
 
     .mobile-menu {
@@ -574,13 +656,16 @@ a.scrollup i:hover {
         right: -100px;
         top: 0;
         background: #fff;
-        width: 290px;
+        width: 200px;
         z-index: 99;
-        padding: 50px 0;
+        padding: 25px 0;
         height: 100%;
         transition: 0.5s all ease;
         opacity: 0;
         visibility: hidden;
+        ul{
+            padding: 0 15px;
+        }
     }
 
     .mobile-menu.open {
@@ -601,7 +686,6 @@ a.scrollup i:hover {
     .mobile-menu li {
         border-bottom: 1px solid #e0e0e0;
         display: block;
-        padding: 0 30px;
     }
 
     .mobile-menu li:last-child {
@@ -613,7 +697,7 @@ a.scrollup i:hover {
         width: 100%;
         height: 100%;
         top: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.59);
         z-index: 98;
         opacity: 0;
         visibility: hidden;
@@ -637,5 +721,296 @@ a.scrollup i:hover {
         font-size: 20px;
         margin-top: -22px;
         padding: 10px;
+    }
+
+    .banner .iphone img {
+        margin-top: 33px;
+    }
+
+    .service {
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+
+    .section-heading h2 {
+        font-size: 39px;
+        margin-bottom: 15px;
+    }
+
+    .service .items .item {
+        max-width: 300px;
+    }
+
+    .package {
+        background-size: cover;
+        padding: 100px 0;
+        background-position: center;
+    }
+
+    .footer-box .footer-rating {
+        width: auto;
+        max-width: 216px;
+    }
+
+    .footer-box .review,
+    .footer-social {
+        text-align: left;
+    }
+
+    .footer-social a {
+        margin-right: 10px;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    html {
+        font-size: 150%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .site-logo img {
+        max-width: 49px;
+    }
+
+    .mobile-trigger {
+        margin-top: 0;
+    }
+
+    .banner {
+        padding-top: 90px;
+        text-align: center;
+
+        .deal {
+            padding-top: 0;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .svg {
+                display: none;
+            }
+
+            span {
+                font-size: rem(11px);
+                margin-top: rem(11px);
+                display: block;
+            }
+        }
+    }
+
+    .banner h2 {
+        font-size: rem(23px);
+        margin-top: rem(5px);
+    }
+
+    .banner blockquote {
+        padding-top: rem(20px);
+        font-size: rem(17.6px);
+        margin-bottom: rem(15px);
+        padding-left: 0;
+        border: none;
+    }
+
+    .banner blockquote::before {
+        height: 6px;
+        width: rem(70px);
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .center {
+        margin: 0 auto;
+    }
+
+    .btn.button {
+        margin-top: rem(18px);
+        padding: rem(11px) rem(10px);
+        font-size: rem(18px);
+    }
+
+    .banner .iphone {
+        text-align: center;
+    }
+
+
+    .banner .iphone img {
+        max-width: rem(162px);
+        min-height: rem(296px);
+    }
+
+    .transparent-img {
+        position: relative;
+        left: -72px;
+    }
+
+    .banner .iphone .clear-img {
+        z-index: 0;
+        right: 80px;
+    }
+
+    .service {
+        background: #fff;
+        padding-top: 20px;
+        margin-top: -162px;
+        padding-bottom: rem(50px);
+
+        .row {
+            margin: 0 -10px;
+        }
+    }
+
+    .service .items .col-md-4 {
+        margin: rem(5px) 0;
+    }
+
+    .service .items .item {
+        padding: 45px 20px 35px 20px;
+        box-shadow: 0px 0 15px rgba(56, 44, 122, 0.181641);
+    }
+
+    .service .items .item h3 {
+        font-size: 18px;
+        margin-top: 25px;
+        padding-bottom: 18px;
+        margin-bottom: 20px;
+    }
+
+    .service::before {
+        background-image: url(../images/Rectangle.png);
+        height: 52px;
+    }
+
+    .section-heading {
+        padding-bottom: rem(28px);
+    }
+
+    .section-heading h2 {
+        font-size: rem(19px);
+        line-height: (30/20);
+    }
+
+    .package {
+        background-image: url(../images/servicmbg.png);
+        background-size: 100% 100%;
+        padding: 60px 0;
+    }
+
+    .package .items {
+        padding: 30px 20px;
+    }
+
+    .package .btn.button {
+        margin-top: 30px;
+    }
+
+    footer {
+        padding: 60px 0;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width:575px) {
+    html {
+        font-size: 100%;
+    }
+
+    .container,
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-xs-1,
+    .col-xs-10,
+    .col-xs-11,
+    .col-xs-12,
+    .col-xs-2,
+    .col-xs-3,
+    .col-xs-4,
+    .col-xs-5,
+    .col-xs-6,
+    .col-xs-7,
+    .col-xs-8,
+    .col-xs-9 {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .service {
+        margin-top: -78px;
+    }
+
+    .banner .iphone img {
+        max-width: 12.125rem;
+    }
+
+    .transparent-img {
+        left: -58px;
+    }
+
+    .banner .iphone .clear-img {
+        right: 0;
+    }
+
+    .footer-box .footer-rating {
+        max-width: 170px;
+    }
+
+    .footer-box .review {
+        font-size: 12px;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+        line-height: 30px;
+        height: 30px;
+        width: 30px;
     }
 }
