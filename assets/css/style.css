@@ -523,6 +523,7 @@ a.scrollup i:hover {
   text-decoration: none;
 }
 
+/*================================== All Css Query ====================================*/
 @media (max-width: 1199px) {
   .footer-social a {
     margin-right: 0;

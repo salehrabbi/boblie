@@ -569,6 +569,10 @@ a.scrollup i:hover {
 }
 
 
+
+
+/*================================== All Css Query ====================================*/
+
 @media (max-width:1199px) {
     .footer-social a {
         margin-right: 0;
@@ -663,7 +667,8 @@ a.scrollup i:hover {
         transition: 0.5s all ease;
         opacity: 0;
         visibility: hidden;
-        ul{
+
+        ul {
             padding: 0 15px;
         }
     }
